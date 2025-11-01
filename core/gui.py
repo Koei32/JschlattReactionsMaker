@@ -134,7 +134,7 @@ class Gui:
 
             final_video = mpe.CompositeVideoClip([meme_clip, look])
 
-            output_path = f"Result/output{k}_{''.join(k for k in random.choices("abcdefghijklmnpqrstuvwxyz", k=8))}.mp4"
+            output_path = f"Result/output{k}_{''.join(k for k in random.choices('abcdefghijklmnpqrstuvwxyz', k=8))}.mp4"
             k += 1
             final_video.write_videofile(output_path, fps=30, remove_temp=True, codec="libx264", audio_codec="aac", threads=6)
 
